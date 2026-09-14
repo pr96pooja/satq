@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #090d16;
+    color: #e2e8f0;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Glassmorphism Tactical Panels */
+.tactical-glass {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.tactical-glow {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+.tactical-glow-magenta {
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+/* MapLibre Compare Splitter Styling */
+.maplibregl-compare {
+  background-color: #00f0ff !important;
+  width: 4px !important;
+  box-shadow: 0 0 12px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.8) !important;
+}
+
+.maplibregl-compare .compare-swiper-vertical {
+  background-color: #090d16 !important;
+  border: 2px solid #00f0ff !important;
+  color: #00f0ff !important;
+  box-shadow: 0 0 15px #00f0ff !important;
+  border-radius: 50% !important;
+  width: 38px !important;
+  height: 38px !important;
+  top: 50% !important;
+  margin-top: -19px !important;
+  margin-left: -17px !important;
+}
+
+/* Crosshair Animation */
+@keyframes target-pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+.target-crosshair {
+  animation: target-pulse 2s infinite ease-in-out;
+}
